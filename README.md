@@ -2,7 +2,60 @@
 
 > A full-stack AI-powered insurance premium risk prediction platform — built with FastAPI, Scikit-learn, React, and Tailwind CSS.
 
-![InsureAI Hero](./docs/hero-preview.png)
+---
+
+## 📸 Screenshots
+
+### 🏠 Hero Section
+![Hero Section](./docs/screenshots/01_hero.png)
+
+---
+
+### 📊 Stats & Metrics
+![Stats Section](./docs/screenshots/02_stats.png)
+
+---
+
+### ✨ Features
+![Features Section](./docs/screenshots/03_features.png)
+
+---
+
+### 🔄 How It Works
+![How It Works](./docs/screenshots/04_how_it_works.png)
+
+---
+
+### 📈 Analytics Dashboard
+![Analytics Section](./docs/screenshots/05_analytics.png)
+
+---
+
+### 🛠️ Tech Stack
+![Tech Stack](./docs/screenshots/06_tech_stack.png)
+
+---
+
+### 💬 Testimonials
+![Testimonials](./docs/screenshots/07_testimonials.png)
+
+---
+
+### 🤖 Live Prediction — Predicted Output: **High Risk**
+
+> Input: Age 35 · Weight 80kg · Height 1.75m · Income ₹8 LPA · Smoker: Yes · City: Mumbai · Occupation: Private Job
+
+![Prediction Result](./docs/screenshots/08_prediction_result.png)
+
+---
+
+### ❓ FAQ
+![FAQ Section](./docs/screenshots/09_faq.png)
+
+---
+
+### 🔗 Footer
+![Footer](./docs/screenshots/10_footer.png)
 
 ---
 
@@ -113,6 +166,8 @@ InsureAI/
 │   │   └── index.css      # Design system tokens
 │   ├── tailwind.config.js
 │   └── vite.config.js     # Proxy config
+├── docs/
+│   └── screenshots/       # Section screenshots for README
 └── README.md
 ```
 
@@ -131,7 +186,7 @@ InsureAI/
 ## 📊 Model Details
 
 | Metric              | Value              |
-|---------------------|--------------------|
+|---------------------|---------------------|
 | Algorithm           | Gradient Boosting  |
 | Accuracy            | 94.2%              |
 | Validation          | 5-fold CV          |
