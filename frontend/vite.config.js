@@ -5,12 +5,5 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    proxy: {
-      // Proxy ALL /predict requests directly to FastAPI — no CORS issues
-      '/predict': {
-        target: 'http://127.0.0.1:8000',
-        changeOrigin: true,
-      },
-    },
   },
 })

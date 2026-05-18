@@ -68,11 +68,12 @@ export default function PredictionSection() {
     };
 
     try {
-      const { data } = await axios.post('/predict', payload, { timeout: 10000 });
+      const apiUrl = import.meta.env.VITE_API_URL || 'https://insureai-iku3.onrender.com';
+      const { data } = await axios.post(`${apiUrl}/predict`, payload, { timeout: 30000 });
       setResult(data);
     } catch (err) {
       if (err.code === 'ECONNABORTED') {
-        setError('Request timed out. Please check that the backend is running on port 8000.');
+        setError('Request timed out. The backend on Render may be waking up (cold start). Please try again in ~30 seconds.');
       } else if (err.response?.status === 422) {
         // Pydantic validation error — extract message
         const details = err.response.data?.detail;
@@ -83,7 +84,7 @@ export default function PredictionSection() {
       } else {
         setError(
           err.response?.data?.detail ||
-          'Could not connect to the backend. Make sure FastAPI is running on port 8000.'
+          'Could not connect to the backend. The Render service may be sleeping — please retry in ~30 seconds.'
         );
       }
     } finally {
@@ -163,9 +164,10 @@ export default function PredictionSection() {
             >
               <Info size={14} color="#4375e5" className="flex-shrink-0 mt-0.5" />
               <p className="text-xs leading-relaxed" style={{ color: '#78746f' }}>
-                Powered by <code className="data-mono" style={{ color:'#4375e5', fontSize:'0.75rem' }}>POST /predict</code> on <code className="data-mono" style={{ color:'#4375e5', fontSize:'0.75rem' }}>localhost:8000</code>.
+                Powered by <code className="data-mono" style={{ color:'#4375e5', fontSize:'0.75rem' }}>POST /predict</code> on{' '}
+                <code className="data-mono" style={{ color:'#4375e5', fontSize:'0.75rem' }}>insureai-iku3.onrender.com</code>.
                 Full API docs at{' '}
-                <a href="http://localhost:8000/docs" target="_blank" rel="noreferrer"
+                <a href="https://insureai-iku3.onrender.com/docs" target="_blank" rel="noreferrer"
                   className="underline" style={{ color:'#4375e5' }}>
                   /docs
                 </a>.

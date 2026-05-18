@@ -27,6 +27,8 @@ frontend/.env.*.local
 .env
 .env.local
 .env.*.local
+# Allow frontend .env (contains only public Render URL, no secrets)
+!frontend/.env
 
 # Editor & OS
 .DS_Store
