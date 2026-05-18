@@ -2,6 +2,15 @@
 
 > A full-stack AI-powered insurance premium risk prediction platform — built with FastAPI, Scikit-learn, React, and Tailwind CSS.
 
+<div align="center">
+
+### 🌐 [**Live Demo → https://insure-ai-brown.vercel.app/**](https://insure-ai-brown.vercel.app/)
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-4375e5?style=for-the-badge&logo=vercel&logoColor=white)](https://insure-ai-brown.vercel.app/)
+[![Backend API](https://img.shields.io/badge/Backend%20API-Render-00b388?style=for-the-badge&logo=render&logoColor=white)](https://insureai-iku3.onrender.com/docs)
+
+</div>
+
 ---
 
 ## 📸 Screenshots
