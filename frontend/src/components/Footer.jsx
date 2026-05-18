@@ -10,7 +10,7 @@ const LINKS = [
     { l:'How It Works',   h:'#home'        },
   ]},
   { title:'Resources', items:[
-    { l:'FastAPI Docs',   h:'http://localhost:8000/docs', ext:true },
+    { l:'FastAPI Docs',   h:'https://insureai-iku3.onrender.com/docs', ext:true },
     { l:'Scikit-learn',   h:'https://scikit-learn.org',  ext:true },
     { l:'Framer Motion',  h:'https://www.framer.com/motion/', ext:true },
     { l:'Vite',           h:'https://vitejs.dev',        ext:true },
@@ -51,7 +51,7 @@ export default function Footer() {
             <a href="#prediction" className="btn-sky">
               Calculate Premium <ArrowRight size={15} />
             </a>
-            <a href="http://localhost:8000/docs" target="_blank" rel="noreferrer" className="btn-outline">
+            <a href="https://insureai-iku3.onrender.com/docs" target="_blank" rel="noreferrer" className="btn-outline">
               API Docs <ExternalLink size={13} />
             </a>
           </div>
