@@ -13,7 +13,7 @@ env/
 venv/
 .venv/
 pip-wheel-metadata/
-*.pkl
+
 
 # Node / Frontend
 frontend/node_modules/

@@ -23,7 +23,7 @@ tier_2_cities = [
 
 #import ML model 
 
-with open("model.pkl","rb") as f:
+with open("model/model.pkl","rb") as f:
     model=pickle.load(f)
 
 app=FastAPI()
