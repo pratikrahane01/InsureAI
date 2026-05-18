@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel,Field,computed_field
 from typing import Literal,Annotated
 import pickle
@@ -27,6 +28,15 @@ with open("model/model.pkl","rb") as f:
     model=pickle.load(f)
 
 app=FastAPI()
+
+# Allow all origins so the frontend (Vercel / Netlify / local) can call the API
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
